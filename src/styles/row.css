@@ -1,0 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caveat&display=swap");
+.row-title {
+  color: #ffffff;
+  text-transform: uppercase;
+  margin-left: 4em;
+}
+
+.row-posters {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  padding: 3.5em;
+  gap: 0.7em;
+}
+
+.row-posters::-webkit-scrollbar {
+  display: none;
+}
+
+.row-posters-poster {
+  max-height: 200px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.row-posters-poster:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  opacity: 1;
+}
+
+.row-posters-poster-large {
+  max-height: 300px;
+}
+/*# sourceMappingURL=row.css.map */

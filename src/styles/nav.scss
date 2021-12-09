@@ -1,0 +1,29 @@
+@import "./scss/index";
+
+nav {
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  padding: 1em;
+  width: 100vw;
+  font-family: $cav;
+  display: flex;
+  justify-content: space-around;
+  transition: all 0.5s ease-in;
+}
+.nav-black {
+  background: $indigo;
+}
+.nav-item {
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+}
+.nav-logo {
+  margin-right: 50em;
+  justify-self: start;
+}
+.nav-avtar {
+  margin-left: 20em;
+  justify-self: end;
+}

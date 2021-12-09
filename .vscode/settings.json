@@ -1,0 +1,11 @@
+{
+  "files.associations": {
+    "*.js": "javascriptreact"
+  },
+  "liveSassCompile.settings.formats": [
+    {
+      "format": "expanded",
+      "extensionName": ".css"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+    "version": 3,
+    "mappings": "AGCA,OAAO,CAAC,oEAAI;AAEZ,OAAO,CAAC,mEAAI",
+    "sources": [
+        "home.scss",
+        "scss/_index.scss",
+        "scss/_colors.scss",
+        "scss/_fonts.scss"
+    ],
+    "names": [],
+    "file": "home.css"
+}

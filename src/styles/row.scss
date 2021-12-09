@@ -1,0 +1,32 @@
+@import "./scss/index";
+
+.row {
+  &-title {
+    color: $white;
+    text-transform: uppercase;
+    margin-left: 4em;
+  }
+  &-posters {
+    display: flex;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    padding: 3.5em;
+    gap: 0.7em;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    &-poster {
+      max-height: 200px;
+      object-fit: contain;
+      transition: transform 0.3s ease-in-out;
+      cursor: pointer;
+      &:hover {
+        transform: scale(1.1);
+        opacity: 1;
+      }
+      &-large {
+        max-height: 300px;
+      }
+    }
+  }
+}
