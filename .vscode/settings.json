@@ -5,7 +5,8 @@
   "liveSassCompile.settings.formats": [
     {
       "format": "expanded",
-      "extensionName": ".css"
+      "extensionName": ".css",
+      "savePath": "/src/styles/css"
     }
   ]
 }

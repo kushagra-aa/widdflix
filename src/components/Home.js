@@ -5,17 +5,18 @@ import Row from "./Row";
 // requests
 import requests from "./../Requests";
 // style
-import "./../styles/home.css";
+import "./../styles/css/home.css";
 
 function Home() {
   return (
     <>
       <div className="container">
+        {/* loader */}
         {/* TOP Banner */}
         <Banner />
         {/* netflix origianls */}
         <Row
-          title="netfllix originals"
+          title={"netfllix originals"}
           fetchURL={requests.fetchNetflixOriginals}
           isLargeRow={true}
         />
