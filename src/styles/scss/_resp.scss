@@ -1,0 +1,6 @@
+$mob-size:"max-width:600px";
+@mixin mob {
+    @media ($mob-size) {
+      @content;
+    }
+  }
