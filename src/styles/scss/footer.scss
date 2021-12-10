@@ -1,18 +1,27 @@
 @import "vars/index";
+@import "resp";
+
 .foot {
   display: flex;
   background: $blue;
-  border-top: 2px solid $red;
+  border-top: 0.125rem solid $red;
   justify-content: space-between;
+  @include mob {
+    flex-direction: column;
+  }
   &-logo-con {
-    width: 377px;
+    width: 23.563rem;
     background: $indigo;
     display: flex;
     align-items: center;
     justify-content: center;
+    @include mob {
+      width: 100%;
+      padding: 2rem;
+    }
     img {
-      width: 178.23px;
-      height: 78px;
+      width: 11.139rem;
+      height: 4.875rem;
     }
   }
   &-det {
@@ -23,33 +32,44 @@
     align-items: center;
     padding: 1em;
     gap: 1em;
+    @include mob {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+      justify-items: center;
+    }
     &-me {
-      width: 112px;
-      height: 112px;
-      border: 0.1px solid $red;
+      width: 7rem;
+      height: 7rem;
+      border: 0.006rem solid $red;
       border-radius: 50%;
       justify-self: center;
     }
     &-name {
       color: $indigo;
-      font-size: 25px;
+      font-size: 1.563rem;
       letter-spacing: 0.1em;
       text-transform: capitalize;
     }
     &-copy {
       color: $white;
       font-weight: 300;
-      font-size: 25px;
+      font-size: 1.563rem;
       letter-spacing: 0.1em;
       text-transform: capitalize;
+      @include mob {
+        font-size: 1rem;
+      }
     }
     &-lang {
       justify-self: end;
       color: $white;
       font-weight: 300;
-      font-size: 20px;
+      font-size: 1.25rem;
       letter-spacing: 0.1em;
       text-transform: capitalize;
+      @include mob {
+        font-size: 0.75rem;
+      }
     }
   }
 }

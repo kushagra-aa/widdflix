@@ -1,4 +1,5 @@
 @import "vars/index";
+@import "resp";
 
 .side-bar {
   display: flex;
@@ -6,13 +7,13 @@
   align-items: center;
   justify-content: center;
   background: $white;
-  padding: 20px 5px;
+  padding: 1.25rem 0.313rem;
   z-index: 10;
   position: fixed;
   left: 0;
   top: 12em;
-  box-shadow: 3px 2px 5px rgba(0, 0, 0, 0.4);
-  border-radius: 0px 30px 30px 0px;
+  box-shadow: 0.188rem 0.125rem 0.313rem rgba(0, 0, 0, 0.4);
+  border-radius: 0 1.875rem 1.875rem 0;
   gap: 2em;
   transition: all 0.5s ease-in-out;
   &:hover {
@@ -33,13 +34,16 @@
   top: 25.7em;
   width: auto;
   height: auto;
-  transition: all 0.5s ease-in-out;
+  transition: all 1s ease-in-out;
   z-index: 11;
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  padding-right: 10px;
-  border-radius: 0px 30px 30px 0px;
+  padding-right: 0.625rem;
+  border-radius: 0 1.875rem 1.875rem 0;
+  @include mob {
+    left: -35em;
+  }
   img {
     cursor: pointer;
   }

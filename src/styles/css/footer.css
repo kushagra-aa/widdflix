@@ -5,14 +5,23 @@
   display: -ms-flexbox;
   display: flex;
   background: #7e87a8;
-  border-top: 2px solid #e50914;
+  border-top: 0.125rem solid #e50914;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
 
+@media (max-width: 600px) {
+  .foot {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .foot-logo-con {
-  width: 377px;
+  width: 23.563rem;
   background: #0e1222;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -25,9 +34,16 @@
           justify-content: center;
 }
 
+@media (max-width: 600px) {
+  .foot-logo-con {
+    width: 100%;
+    padding: 2rem;
+  }
+}
+
 .foot-logo-con img {
-  width: 178.23px;
-  height: 78px;
+  width: 11.139rem;
+  height: 4.875rem;
 }
 
 .foot-det {
@@ -45,10 +61,20 @@
   gap: 1em;
 }
 
+@media (max-width: 600px) {
+  .foot-det {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    justify-items: center;
+  }
+}
+
 .foot-det-me {
-  width: 112px;
-  height: 112px;
-  border: 0.1px solid #e50914;
+  width: 7rem;
+  height: 7rem;
+  border: 0.006rem solid #e50914;
   border-radius: 50%;
   -ms-grid-column-align: center;
       justify-self: center;
@@ -56,7 +82,7 @@
 
 .foot-det-name {
   color: #0e1222;
-  font-size: 25px;
+  font-size: 1.563rem;
   letter-spacing: 0.1em;
   text-transform: capitalize;
 }
@@ -64,9 +90,15 @@
 .foot-det-copy {
   color: #ffffff;
   font-weight: 300;
-  font-size: 25px;
+  font-size: 1.563rem;
   letter-spacing: 0.1em;
   text-transform: capitalize;
+}
+
+@media (max-width: 600px) {
+  .foot-det-copy {
+    font-size: 1rem;
+  }
 }
 
 .foot-det-lang {
@@ -74,8 +106,14 @@
       justify-self: end;
   color: #ffffff;
   font-weight: 300;
-  font-size: 20px;
+  font-size: 1.25rem;
   letter-spacing: 0.1em;
   text-transform: capitalize;
+}
+
+@media (max-width: 600px) {
+  .foot-det-lang {
+    font-size: 0.75rem;
+  }
 }
 /*# sourceMappingURL=footer.css.map */

@@ -15,14 +15,14 @@
       -ms-flex-pack: center;
           justify-content: center;
   background: #ffffff;
-  padding: 20px 5px;
+  padding: 1.25rem 0.313rem;
   z-index: 10;
   position: fixed;
   left: 0;
   top: 12em;
-  -webkit-box-shadow: 3px 2px 5px rgba(0, 0, 0, 0.4);
-          box-shadow: 3px 2px 5px rgba(0, 0, 0, 0.4);
-  border-radius: 0px 30px 30px 0px;
+  -webkit-box-shadow: 0.188rem 0.125rem 0.313rem rgba(0, 0, 0, 0.4);
+          box-shadow: 0.188rem 0.125rem 0.313rem rgba(0, 0, 0, 0.4);
+  border-radius: 0 1.875rem 1.875rem 0;
   gap: 2em;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
@@ -51,8 +51,8 @@
   top: 25.7em;
   width: auto;
   height: auto;
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
   z-index: 11;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -63,8 +63,14 @@
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  padding-right: 10px;
-  border-radius: 0px 30px 30px 0px;
+  padding-right: 0.625rem;
+  border-radius: 0 1.875rem 1.875rem 0;
+}
+
+@media (max-width: 600px) {
+  .search {
+    left: -35em;
+  }
 }
 
 .search img {

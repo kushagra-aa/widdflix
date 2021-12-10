@@ -17,23 +17,30 @@ nav {
   transition: all 0.5s ease-in;
 }
 
+@media (max-width: 600px) {
+  nav {
+    gap: 5em;
+    width: 100%;
+  }
+}
+
 .nav-black {
   background: #0e1222;
 }
 
 .nav-item {
   cursor: pointer;
-  width: 50px;
-  height: 50px;
+  width: 3.125rem;
+  height: 3.125rem;
 }
 
 .nav-logo {
-  width: 137.1px;
-  height: 60px;
+  width: 8.569rem;
+  height: 3.75rem;
 }
 
 .nav-avtar {
-  border: 3px solid #7e87a8;
-  border-radius: 50px;
+  border: 0.188rem solid #7e87a8;
+  border-radius: 3.125rem;
 }
 /*# sourceMappingURL=topbar.css.map */
