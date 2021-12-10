@@ -1,0 +1,84 @@
+@import "vars/index";
+
+.banner {
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+  position: relative;
+  object-fit: contain;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  user-select: none;
+  padding-bottom: 10em;
+  &-contents {
+    gap: 0.4em;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 0fr;
+    grid-template-rows: 1fr 1fr 0fr;
+    grid-template-areas:
+      "title title title title"
+      "des des des des"
+      "vote lang stat play";
+    background: rgba(14, 18, 34, 0.5);
+    border-radius: 30px;
+    padding: 1em;
+    max-width: 80%;
+    &-title {
+      font-size: 3rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      grid-area: title;
+      color: $white;
+      font-family: $cav;
+    }
+    &-buttons {
+      grid-area: play;
+      &-button {
+        border: none;
+        cursor: pointer;
+        color: $white;
+        outline: none;
+        padding: 1em 4em;
+        background: $indigo;
+        font-weight: 700;
+        text-transform: capitalize;
+        transition: all 0.4s ease-in-out;
+        border-radius: 10px;
+        &:hover {
+          filter: brightness(170%);
+        }
+      }
+    }
+    &-des {
+      grid-area: des;
+      width: 60%;
+      color: $blue;
+      font-size: 25px;
+      line-height: 35px;
+      letter-spacing: 0.05em;
+    }
+    &-vote {
+      grid-area: vote;
+      color: $red;
+    }
+    &-lang {
+      grid-area: lang;
+      text-transform: capitalize;
+      text-decoration: underline;
+      color: $red;
+    }
+    &-stat {
+      grid-area: stat;
+      color: $red;
+    }
+  }
+  &--fadeBottom {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 7.4rem;
+    background: linear-gradient(180deg, rgba(14, 18, 33, 0), $indigo);
+  }
+}

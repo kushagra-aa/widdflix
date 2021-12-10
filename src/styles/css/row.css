@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caveat&display=swap");
+.row {
+  margin-top: 2em;
+}
+
+.row-title {
+  color: #ffffff;
+  text-transform: uppercase;
+  margin-left: 4em;
+  font-family: "Caveat", cursive;
+}
+
+.row-posters {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  padding: 2em;
+  padding-left: 5em;
+  gap: 0.7em;
+  min-height: 200px;
+}
+
+.row-posters::-webkit-scrollbar {
+  display: none;
+}
+
+.row-posters-poster {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 2em;
+  -webkit-filter: drop-shadow(0px 3px 5px rgba(255, 255, 255, 0.11));
+          filter: drop-shadow(0px 3px 5px rgba(255, 255, 255, 0.11));
+  border-radius: 20px;
+}
+
+.row-posters-poster-large {
+  height: 300px;
+}
+
+.row-posters-poster:hover .row-posters-poster-front {
+  -webkit-transform: perspective(1000px) rotateY(180deg);
+          transform: perspective(1000px) rotateY(180deg);
+}
+
+.row-posters-poster-front {
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transform: perspective(1000px) rotateY(0deg);
+          transform: perspective(1000px) rotateY(0deg);
+  -webkit-transition: 1s;
+  transition: 1s;
+  max-height: 200px;
+  border-radius: 20px;
+}
+
+.row-posters-poster-front-large {
+  max-height: 300px;
+}
+
+.row-posters-poster-front-img {
+  max-height: 200px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.row-posters-poster-front-img-large {
+  max-height: 300px;
+}
+
+.row-posters-poster:hover .row-posters-poster-back {
+  -webkit-transform: perspective(1000px) rotateY(0deg);
+          transform: perspective(1000px) rotateY(0deg);
+}
+
+.row-posters-poster-back {
+  padding: 2em;
+  background: #7e87a8;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  top: 0;
+  -webkit-transform: perspective(1000px) rotateY(-180deg);
+          transform: perspective(1000px) rotateY(-180deg);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transition: 1s;
+  transition: 1s;
+  border-radius: 20px;
+  max-height: 200px;
+  max-width: 355.55px;
+}
+
+.row-posters-poster-back-large {
+  max-width: 200.09px;
+  max-height: 300px;
+}
+
+.row-posters-poster-back * {
+  color: #0e1222;
+}
+/*# sourceMappingURL=row.css.map */

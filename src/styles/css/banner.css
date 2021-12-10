@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caveat&display=swap");
+.banner {
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+  position: relative;
+  -o-object-fit: contain;
+     object-fit: contain;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  padding-bottom: 10em;
+}
+
+.banner-contents {
+  gap: 0.4em;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 0fr;
+      grid-template-columns: 1fr 1fr 1fr 0fr;
+  -ms-grid-rows: 1fr 1fr 0fr;
+      grid-template-rows: 1fr 1fr 0fr;
+      grid-template-areas: "title title title title" "des des des des" "vote lang stat play";
+  background: rgba(14, 18, 34, 0.5);
+  border-radius: 30px;
+  padding: 1em;
+  max-width: 80%;
+}
+
+.banner-contents-title {
+  font-size: 3rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-area: title;
+  color: #ffffff;
+  font-family: "Caveat", cursive;
+}
+
+.banner-contents-buttons {
+  -ms-grid-row: 3;
+  -ms-grid-column: 4;
+  grid-area: play;
+}
+
+.banner-contents-buttons-button {
+  border: none;
+  cursor: pointer;
+  color: #ffffff;
+  outline: none;
+  padding: 1em 4em;
+  background: #0e1222;
+  font-weight: 700;
+  text-transform: capitalize;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  border-radius: 10px;
+}
+
+.banner-contents-buttons-button:hover {
+  -webkit-filter: brightness(170%);
+          filter: brightness(170%);
+}
+
+.banner-contents-des {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-area: des;
+  width: 60%;
+  color: #7e87a8;
+  font-size: 25px;
+  line-height: 35px;
+  letter-spacing: 0.05em;
+}
+
+.banner-contents-vote {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: vote;
+  color: #e50914;
+}
+
+.banner-contents-lang {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: lang;
+  text-transform: capitalize;
+  text-decoration: underline;
+  color: #e50914;
+}
+
+.banner-contents-stat {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+  grid-area: stat;
+  color: #e50914;
+}
+
+.banner--fadeBottom {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 7.4rem;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(14, 18, 33, 0)), to(#0e1222));
+  background: linear-gradient(180deg, rgba(14, 18, 33, 0), #0e1222);
+}
+/*# sourceMappingURL=banner.css.map */

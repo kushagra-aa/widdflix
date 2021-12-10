@@ -1,0 +1,55 @@
+@import "vars/index";
+.foot {
+  display: flex;
+  background: $blue;
+  border-top: 2px solid $red;
+  justify-content: space-between;
+  &-logo-con {
+    width: 377px;
+    background: $indigo;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+      width: 178.23px;
+      height: 78px;
+    }
+  }
+  &-det {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-items: start;
+    align-items: center;
+    padding: 1em;
+    gap: 1em;
+    &-me {
+      width: 112px;
+      height: 112px;
+      border: 0.1px solid $red;
+      border-radius: 50%;
+      justify-self: center;
+    }
+    &-name {
+      color: $indigo;
+      font-size: 25px;
+      letter-spacing: 0.1em;
+      text-transform: capitalize;
+    }
+    &-copy {
+      color: $white;
+      font-weight: 300;
+      font-size: 25px;
+      letter-spacing: 0.1em;
+      text-transform: capitalize;
+    }
+    &-lang {
+      justify-self: end;
+      color: $white;
+      font-weight: 300;
+      font-size: 20px;
+      letter-spacing: 0.1em;
+      text-transform: capitalize;
+    }
+  }
+}
