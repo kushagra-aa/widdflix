@@ -4,12 +4,19 @@
 /node_modules
 /.pnp
 .pnp.js
+# vscode folder
+.vscode
+# firebase folder
+.firebase
 
 # testing
 /coverage
 
 # production
 /build
+
+# dot env
+.env
 
 # misc
 .DS_Store

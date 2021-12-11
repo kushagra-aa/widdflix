@@ -1,12 +1,12 @@
 @import "vars/index";
 @import "resp";
 
-nav {
+.topbar {
   position: fixed;
   top: 0;
   z-index: 10;
   padding: 1em 5em;
-  width: 89vw;
+  width: 100vw;
   font-family: $cav;
   display: flex;
   justify-content: space-between;

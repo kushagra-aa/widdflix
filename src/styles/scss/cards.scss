@@ -1,0 +1,36 @@
+@import "vars/index";
+@import "resp";
+
+.cards-page {
+  margin-top: 7em;
+  padding: 2em;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  h2 {
+    font-size: 3em;
+    color: $white;
+    text-transform: uppercase;
+    font-family: $cav;
+  }
+  &-con {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1em;
+    @include mob {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    .loader {
+      align-self: flex-start;
+      justify-content: center;
+    }
+  }
+  &-paginate-con {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    * {
+      color: $blue !important;
+    }
+  }
+}

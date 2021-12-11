@@ -1,9 +1,12 @@
-import axios from "./../axios";
-import requests from "./../Requests";
 import React, { useEffect, useState } from "react";
-
-import "./../styles/css/banner.css";
-import Spinner from "./Spinner";
+// loacl axios
+import axios from "../../axios";
+// requests
+import requests from "../../Requests";
+// style
+import "./../../styles/css/banner.css";
+// loader
+import Spinner from "../Spinner";
 
 function Banner() {
   // state for movie obj
@@ -13,7 +16,7 @@ function Banner() {
 
   useEffect(() => {
     async function fetchData() {
-      const request = await axios.get(requests.fetchNetflixOriginals);
+      const request = await axios.get(requests.fetchTrending);
       setMovie(
         request.data.results[
           Math.floor(Math.random() * request.data.results.length - 1)

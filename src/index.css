@@ -21,6 +21,7 @@
   font-family: "Poppins", sans-serif;
   color: #7e87a8;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {

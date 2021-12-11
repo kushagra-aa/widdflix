@@ -1,0 +1,13 @@
+{
+    "version": 3,
+    "mappings": "AGCA,OAAO,CAAC,oEAAI;AAEZ,OAAO,CAAC,mEAAI;AHDZ,AAAA,WAAW,CAAC;EACV,UAAU,EAAE,GAAG;EACf,OAAO,EAAE,GAAG;CACb",
+    "sources": [
+        "../scss/search.scss",
+        "../scss/vars/_index.scss",
+        "../scss/vars/_colors.scss",
+        "../scss/vars/_fonts.scss",
+        "../scss/_resp.scss"
+    ],
+    "names": [],
+    "file": "search.css"
+}

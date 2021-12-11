@@ -16,6 +16,7 @@
   border-radius: 0 1.875rem 1.875rem 0;
   gap: 2em;
   transition: all 0.5s ease-in-out;
+  opacity: 0.5;
   &:hover {
     transform: scale(1.005);
   }

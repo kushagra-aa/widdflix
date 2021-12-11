@@ -1,6 +1,7 @@
 import React from "react";
-import Banner from "./Banner";
-import Row from "./Row";
+// components
+import Banner from "../components/Home/Banner";
+import Row from "../components/Home/Row";
 
 // requests
 import requests from "./../Requests";

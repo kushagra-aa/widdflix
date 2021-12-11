@@ -19,8 +19,15 @@ function TopBar() {
 
   return (
     <>
-      <nav className={`${show && "nav-black"}`}>
-        <img className="nav-item nav-logo" src={logo} alt="WiddFlix" />
+      <nav className={`${show && "nav-black"} topbar`}>
+        <img
+          className="nav-item nav-logo"
+          src={logo}
+          alt="WiddFlix"
+          onClick={() => {
+            window.scroll(0, 0);
+          }}
+        />
         <img className="nav-item nav-avtar" src={noAv} alt="avatar" />
       </nav>
     </>

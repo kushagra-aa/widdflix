@@ -1,11 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Caveat&display=swap");
-nav {
+.topbar {
   position: fixed;
   top: 0;
   z-index: 10;
   padding: 1em 5em;
-  width: 89vw;
+  width: 100vw;
   font-family: "Caveat", cursive;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -18,7 +18,7 @@ nav {
 }
 
 @media (max-width: 600px) {
-  nav {
+  .topbar {
     gap: 5em;
     width: 100%;
   }
