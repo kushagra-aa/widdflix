@@ -1,0 +1,201 @@
+@import "vars/index";
+@import "resp";
+
+.profile {
+  margin-top: 8em;
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  justify-self: center;
+  gap: 0.5em;
+  margin-bottom: 1em;
+  width: 60%;
+  @include mob {
+    width: 90%;
+    font-size: 10px;
+  }
+  > h2 {
+    align-self: flex-start;
+    font-size: 40px;
+    line-height: 47px;
+    color: $white;
+    letter-spacing: 0.1em;
+    text-transform: capitalize;
+    border-bottom: 0.05em solid $white;
+    width: 100%;
+  }
+  &-con {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 0.5fr 1.5fr;
+    grid-template-rows: 0.3fr 2.4fr 0.3fr;
+    grid-template-areas:
+      "av mail"
+      "av plans"
+      "av signout";
+    gap: 0.7em;
+    justify-items: center;
+    @include mob {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    > img {
+      grid-area: av;
+      width: 138px;
+      height: 138px;
+      border-radius: 10px;
+    }
+    &-useremail {
+      grid-area: mail;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      padding-left: 1em;
+      width: 100%;
+      height: 45px;
+      background: $blue;
+      border-radius: 10px;
+      // font styles
+      color: $indigo;
+      font-size: 25px;
+      letter-spacing: 0.1em;
+    }
+    &-plans-con {
+      width: 100%;
+      grid-area: plans;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 0.3fr 1.7fr;
+      grid-template-areas:
+        "title name"
+        "plans plans";
+      width: 100%;
+      grid-gap: 0.5em 0;
+      > h3 {
+        grid-area: title;
+        font-size: 30px;
+        line-height: 35px;
+        letter-spacing: 0.2em;
+        text-transform: capitalize;
+      }
+      > h3,
+      > p {
+        width: 100%;
+        text-align: left;
+        border-bottom: 0.05em solid $white;
+        color: $white;
+        display: flex;
+        align-items: flex-end;
+        height: 80%;
+      }
+      > p {
+        grid-area: name;
+        justify-content: flex-end;
+        text-align: right;
+        font-size: 18px;
+        letter-spacing: 0.2em;
+        text-transform: capitalize;
+        span {
+          font-size: 20px;
+          color: $red;
+          text-transform: uppercase;
+        }
+      }
+      &-plans {
+        grid-area: plans;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5em;
+        &-plan {
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr;
+          grid-template-rows: 1fr 1fr;
+          gap: 0px 0px;
+          grid-template-areas:
+            "title title btn"
+            "des rate btn";
+          transition: all 0.5s ease-in-out;
+          &:hover {
+            background: rgba(255, 255, 255, 0.096);
+          }
+          * {
+            color: $white;
+            text-align: left;
+          }
+          &-name {
+            grid-area: title;
+            font-size: 25px;
+            letter-spacing: 0.2em;
+            text-transform: capitalize;
+          }
+          &-sub {
+            grid-area: btn;
+            background: $red;
+            outline: none;
+            border: none;
+            border-radius: 10px;
+            // font styles
+            letter-spacing: 0.3em;
+            text-transform: capitalize;
+            font-size: 18px;
+            text-align: center;
+            width: 100%;
+            height: 60%;
+            align-self: center;
+            transition: all 0.5s ease-in-out;
+            cursor: pointer;
+            &:hover {
+              filter: brightness(80%);
+            }
+          }
+          &-des {
+            grid-area: des;
+          }
+          &-rate {
+            grid-area: rate;
+          }
+        }
+        .plan-current {
+          &:hover {
+            background: $indigo;
+          }
+          * {
+            color: $blue;
+          }
+          .current-btn {
+            background: $blue;
+            color: $white;
+            cursor: not-allowed;
+            &:hover {
+              filter: none;
+            }
+          }
+        }
+      }
+    }
+    &-signout {
+      grid-area: signout;
+      width: 100%;
+      background: $red;
+      outline: none;
+      border: none;
+      border-radius: 10px;
+      // font styles
+      letter-spacing: 0.3em;
+      text-transform: capitalize;
+      font-weight: bold;
+      font-size: 25px;
+      color: $white;
+      transition: all 0.5s ease-in-out;
+      cursor: pointer;
+      &:hover {
+        filter: brightness(110%);
+      }
+    }
+  }
+}

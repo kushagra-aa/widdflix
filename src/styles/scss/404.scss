@@ -1,0 +1,63 @@
+@import "./vars/index";
+@import "resp";
+
+.con-404 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  img {
+    animation: floating 10s infinite ease-in-out;
+    animation-direction: alternate-reverse;
+    @include mob {
+      width: 150%;
+    }
+  }
+  .btns-404 {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    gap: 2em;
+    position: relative;
+    bottom: 12rem;
+    @include mob {
+      flex-direction: column;
+      bottom: 0;
+    }
+  }
+  .btn-404 {
+    padding: 10px;
+    border-radius: 10px;
+    color: $indigo;
+    background: $blue;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 35px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.1em;
+    transition: all 0.5s ease-in-out;
+    text-decoration: none;
+    &:hover {
+      filter: brightness(110%);
+    }
+  }
+  .btn-mid {
+    background: $red;
+    color: $white;
+    font-weight: bold;
+    font-size: 40px;
+    padding: 1em;
+  }
+}
+@keyframes floating {
+  0% {
+    transform: translateY(1em);
+  }
+  100% {
+    transform: translateY(-1em);
+  }
+}

@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caveat&display=swap");
+.con-404 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+}
+
+.con-404 img {
+  -webkit-animation: floating 10s infinite ease-in-out;
+          animation: floating 10s infinite ease-in-out;
+  animation-direction: alternate-reverse;
+}
+
+@media (max-width: 600px) {
+  .con-404 img {
+    width: 150%;
+  }
+}
+
+.con-404 .btns-404 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  gap: 2em;
+  position: relative;
+  bottom: 12rem;
+}
+
+@media (max-width: 600px) {
+  .con-404 .btns-404 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    bottom: 0;
+  }
+}
+
+.con-404 .btn-404 {
+  padding: 10px;
+  border-radius: 10px;
+  color: #0e1222;
+  background: #7e87a8;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 35px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  letter-spacing: 0.1em;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  text-decoration: none;
+}
+
+.con-404 .btn-404:hover {
+  -webkit-filter: brightness(110%);
+          filter: brightness(110%);
+}
+
+.con-404 .btn-mid {
+  background: #e50914;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 40px;
+  padding: 1em;
+}
+
+@-webkit-keyframes floating {
+  0% {
+    -webkit-transform: translateY(1em);
+            transform: translateY(1em);
+  }
+  100% {
+    -webkit-transform: translateY(-1em);
+            transform: translateY(-1em);
+  }
+}
+
+@keyframes floating {
+  0% {
+    -webkit-transform: translateY(1em);
+            transform: translateY(1em);
+  }
+  100% {
+    -webkit-transform: translateY(-1em);
+            transform: translateY(-1em);
+  }
+}
+/*# sourceMappingURL=404.css.map */

@@ -78,7 +78,6 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  top: 0;
   -webkit-transform: perspective(62.5rem) rotateY(-180deg);
           transform: perspective(62.5rem) rotateY(-180deg);
   -webkit-backface-visibility: hidden;
@@ -90,12 +89,31 @@
   max-width: 22.222rem;
 }
 
+.card-back * {
+  color: #0e1222;
+}
+
+.card-back-btn {
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 1em 4em;
+  background: #0e1222;
+  font-weight: 700;
+  text-transform: capitalize;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  border-radius: 0.625rem;
+  color: #ffffff;
+}
+
+.card-back-btn:hover {
+  -webkit-filter: brightness(170%);
+          filter: brightness(170%);
+}
+
 .card-back-large {
   max-width: 12.506rem;
   max-height: 18.75rem;
-}
-
-.card-back * {
-  color: #0e1222;
 }
 /*# sourceMappingURL=card.css.map */

@@ -47,19 +47,33 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    top: 0;
     transform: perspective(62.5rem) rotateY(-180deg);
     backface-visibility: hidden;
     transition: 1s;
     border-radius: 1.25rem;
     max-height: 12.5rem;
     max-width: 22.222rem;
+    * {
+      color: $indigo;
+    }
+    &-btn {
+      border: none;
+      cursor: pointer;
+      outline: none;
+      padding: 1em 4em;
+      background: $indigo;
+      font-weight: 700;
+      text-transform: capitalize;
+      transition: all 0.4s ease-in-out;
+      border-radius: 0.625rem;
+      color: $white;
+      &:hover {
+        filter: brightness(170%);
+      }
+    }
     &-large {
       max-width: 12.506rem;
       max-height: 18.75rem;
-    }
-    * {
-      color: $indigo;
     }
   }
 }

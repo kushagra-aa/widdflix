@@ -6,7 +6,7 @@ import "./../../styles/css/row.css";
 import Spinner from "../Spinner";
 import Card from "../Card";
 
-function Row({ title, fetchURL, isLargeRow = false }) {
+function Row({ title, fetchURL, isLargeRow = false, type }) {
   const [movies, setMovies] = useState();
   const [loading, setLoading] = useState(true);
 
@@ -34,6 +34,7 @@ function Row({ title, fetchURL, isLargeRow = false }) {
                   movie={movie}
                   isLargeRow={isLargeRow}
                   key={movie.id}
+                  type={type}
                 ></Card>
               )
           )}

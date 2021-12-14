@@ -1,11 +1,17 @@
 import React, { useEffect, useState } from "react";
+// link from react router
+import { Link } from "react-router-dom";
+// logo png
 import logo from "./../assets/LOGO-text.png";
-import noAv from "./../assets/imgs/no-av.png";
+// avatar png
+import Avatar from "./../assets/imgs/no-av.png";
 
 import "./../styles/css/topbar.css";
 
 function TopBar() {
   const [show, handelShow] = useState(false);
+  // scroll to top
+  const scroll = () => window.scroll(0, 0);
 
   const transitionNav = () => {
     if (window.scrollY > 100) handelShow(true);
@@ -28,7 +34,9 @@ function TopBar() {
             window.scroll(0, 0);
           }}
         />
-        <img className="nav-item nav-avtar" src={noAv} alt="avatar" />
+        <Link to="/profile" onClick={scroll}>
+          <img className="nav-item nav-avtar" src={Avatar} alt="avatar" />
+        </Link>
       </nav>
     </>
   );

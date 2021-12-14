@@ -7,6 +7,7 @@ import requests from "../../Requests";
 import "./../../styles/css/banner.css";
 // loader
 import Spinner from "../Spinner";
+import { Link } from "react-router-dom";
 
 function Banner() {
   // state for movie obj
@@ -51,11 +52,6 @@ function Banner() {
           <p className="banner-contents-vote">{movie?.vote_average}</p>
           <p className="banner-contents-lang">{movie?.original_language}</p>
           <p className="banner-contents-stat">{movie?.status}</p>
-          <div className="banner-contents-buttons">
-            <button className="banner-contents-buttons-button banner-contents-buttons-play">
-              play
-            </button>
-          </div>
         </div>
         <div className="banner--fadeBottom" />
       </header>

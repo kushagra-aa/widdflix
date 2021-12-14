@@ -1,0 +1,299 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caveat&display=swap");
+.profile {
+  margin-top: 8em;
+  padding: 2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+  justify-self: center;
+  gap: 0.5em;
+  margin-bottom: 1em;
+  width: 60%;
+}
+
+@media (max-width: 600px) {
+  .profile {
+    width: 90%;
+    font-size: 10px;
+  }
+}
+
+.profile > h2 {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  font-size: 40px;
+  line-height: 47px;
+  color: #ffffff;
+  letter-spacing: 0.1em;
+  text-transform: capitalize;
+  border-bottom: 0.05em solid #ffffff;
+  width: 100%;
+}
+
+.profile-con {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 0.5fr 1.5fr;
+      grid-template-columns: 0.5fr 1.5fr;
+  -ms-grid-rows: 0.3fr 2.4fr 0.3fr;
+      grid-template-rows: 0.3fr 2.4fr 0.3fr;
+      grid-template-areas: "av mail" "av plans" "av signout";
+  gap: 0.7em;
+  justify-items: center;
+}
+
+@media (max-width: 600px) {
+  .profile-con {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.profile-con > img {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 1;
+  grid-area: av;
+  width: 138px;
+  height: 138px;
+  border-radius: 10px;
+}
+
+.profile-con-useremail {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: mail;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 1em;
+  width: 100%;
+  height: 45px;
+  background: #7e87a8;
+  border-radius: 10px;
+  color: #0e1222;
+  font-size: 25px;
+  letter-spacing: 0.1em;
+}
+
+.profile-con-plans-con {
+  width: 100%;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: plans;
+  display: -ms-grid;
+  display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 0.3fr 1.7fr;
+      grid-template-areas: "title name" "plans plans";
+  width: 100%;
+  grid-gap: 0.5em 0;
+}
+
+.profile-con-plans-con > h3 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: title;
+  font-size: 30px;
+  line-height: 35px;
+  letter-spacing: 0.2em;
+  text-transform: capitalize;
+}
+
+.profile-con-plans-con > h3,
+.profile-con-plans-con > p {
+  width: 100%;
+  text-align: left;
+  border-bottom: 0.05em solid #ffffff;
+  color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  height: 80%;
+}
+
+.profile-con-plans-con > p {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: name;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  text-align: right;
+  font-size: 18px;
+  letter-spacing: 0.2em;
+  text-transform: capitalize;
+}
+
+.profile-con-plans-con > p span {
+  font-size: 20px;
+  color: #e50914;
+  text-transform: uppercase;
+}
+
+.profile-con-plans-con-plans {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: plans;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.5em;
+}
+
+.profile-con-plans-con-plans-plan {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+  gap: 0px 0px;
+      grid-template-areas: "title title btn" "des rate btn";
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.profile-con-plans-con-plans-plan:hover {
+  background: rgba(255, 255, 255, 0.096);
+}
+
+.profile-con-plans-con-plans-plan * {
+  color: #ffffff;
+  text-align: left;
+}
+
+.profile-con-plans-con-plans-plan-name {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: title;
+  font-size: 25px;
+  letter-spacing: 0.2em;
+  text-transform: capitalize;
+}
+
+.profile-con-plans-con-plans-plan-sub {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 3;
+  grid-area: btn;
+  background: #e50914;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  letter-spacing: 0.3em;
+  text-transform: capitalize;
+  font-size: 18px;
+  text-align: center;
+  width: 100%;
+  height: 60%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+.profile-con-plans-con-plans-plan-sub:hover {
+  -webkit-filter: brightness(80%);
+          filter: brightness(80%);
+}
+
+.profile-con-plans-con-plans-plan-des {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: des;
+}
+
+.profile-con-plans-con-plans-plan-rate {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: rate;
+}
+
+.profile-con-plans-con-plans .plan-current:hover {
+  background: #0e1222;
+}
+
+.profile-con-plans-con-plans .plan-current * {
+  color: #7e87a8;
+}
+
+.profile-con-plans-con-plans .plan-current .current-btn {
+  background: #7e87a8;
+  color: #ffffff;
+  cursor: not-allowed;
+}
+
+.profile-con-plans-con-plans .plan-current .current-btn:hover {
+  -webkit-filter: none;
+          filter: none;
+}
+
+.profile-con-signout {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: signout;
+  width: 100%;
+  background: #e50914;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  letter-spacing: 0.3em;
+  text-transform: capitalize;
+  font-weight: bold;
+  font-size: 25px;
+  color: #ffffff;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+.profile-con-signout:hover {
+  -webkit-filter: brightness(110%);
+          filter: brightness(110%);
+}
+/*# sourceMappingURL=profile.css.map */

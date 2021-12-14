@@ -11,7 +11,7 @@ import Paginate from "./Paginate";
 import Genres from "./Genres";
 
 const Cards = ({ fetchURL, title = "", type }) => {
-  const [movies, setMovies] = useState();
+  const [movies, setMovies] = useState(null);
   const [totalPages, setTotalPages] = useState();
   const [page, setPage] = useState(1);
   const [loading, setLoading] = useState(true);
@@ -43,10 +43,15 @@ const Cards = ({ fetchURL, title = "", type }) => {
         />
         <div className="cards-page-con">
           {loading ? <Spinner className="loader" loading={loading} /> : ""}
-          {!movies ? <h2>None Found:</h2> : ""}
           {movies?.map((movie) => (
-            <Card movie={movie} isLargeRow={true} key={movie.id}></Card>
+            <Card
+              movie={movie}
+              isLargeRow={true}
+              type={type}
+              key={movie.id}
+            ></Card>
           ))}
+          {!movies && <h2>None Found!</h2>}
         </div>
       </div>
       <div className="cards-page-paginate-con">

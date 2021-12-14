@@ -21,6 +21,8 @@
   padding-left: 5em;
   gap: 0.7em;
   min-height: 12.5rem;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 .row-posters::-webkit-scrollbar {

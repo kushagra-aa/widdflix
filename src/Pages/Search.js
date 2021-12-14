@@ -8,6 +8,7 @@ import "./../styles/css/search.css";
 
 const Search = () => {
   const [type, setType] = useState(0);
+  // eslint-disable-next-line no-unused-vars
   const [page, setPage] = useState(0);
   let { searchterm } = useParams();
   const [typeText, setTypeText] = useState("");
@@ -19,7 +20,7 @@ const Search = () => {
         ? `${requests.fetchSearchTv}${searchterm}`
         : `${requests.fetchSearchMovie}${searchterm}`
     );
-  }, [type]);
+  }, [searchterm, type]);
   return (
     <>
       <div className="search-con">
@@ -37,11 +38,7 @@ const Search = () => {
           <Tab style={{ width: "100%" }} label="In TV Series" />
         </Tabs>
       </div>
-      {!searchterm ? (
-        <h4>None Found</h4>
-      ) : (
-        <Cards fetchURL={fetchURL} type={typeText}></Cards>
-      )}
+      <Cards fetchURL={fetchURL} type={`${typeText}s`}></Cards>
     </>
   );
 };

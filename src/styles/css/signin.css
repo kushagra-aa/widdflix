@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caveat&display=swap");
+.signin {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+  background: #0e1222;
+  padding: 5em 2em;
+  opacity: 0.9;
+  border-radius: 0.5em;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.signin:hover {
+  opacity: 1;
+}
+
+.signin h2 {
+  text-transform: capitalize;
+  color: #ffffff;
+  font-size: 4rem;
+  font-weight: 800;
+  padding: 0.5em;
+}
+
+.signin * {
+  border: none;
+  padding: 1em;
+  border-radius: 0.5em;
+}
+
+.signin-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+  gap: 0.6em;
+}
+
+.signin-form > input {
+  padding: 1em 10em;
+}
+
+.signin-form > input:focus-visible {
+  outline: 0.1em solid #e50914 !important;
+}
+
+@media (max-width: 600px) {
+  .signin-form > input {
+    padding: 0.5em;
+  }
+}
+
+.signin-form > button {
+  color: #ffffff;
+  background: #e50914;
+  text-transform: uppercase;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+}
+
+.signin-form > button:hover {
+  background: #7e87a8;
+}
+
+.signin-form p {
+  text-transform: capitalize;
+  color: #7e87a8;
+}
+
+.signin-form p span {
+  cursor: pointer;
+  color: #ffffff;
+}
+
+.signin-form p span:hover {
+  text-decoration: underline;
+}
+/*# sourceMappingURL=signin.css.map */

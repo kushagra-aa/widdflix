@@ -16,5 +16,7 @@ const requests = {
   fetchGenresTv: `https://api.themoviedb.org/3/genre/tv/list?api_key=${API_KEY}&language=en-US`,
   fetchSearchTv: `https://api.themoviedb.org/3/search/tv?api_key=${API_KEY}&language=en-US&include_adult=true&query=`,
   fetchSearchMovie: `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&language=en-US&include_adult=true&query=`,
+  fetchMovieDetails: `https://api.themoviedb.org/3/movie/`,
+  fetchTvDetails: `https://api.themoviedb.org/3/tv/`,
 };
 export default requests;

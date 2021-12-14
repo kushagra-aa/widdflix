@@ -1,0 +1,67 @@
+@import "vars/index";
+@import "resp";
+
+.signin {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+  background: $indigo;
+  padding: 5em 2em;
+  opacity: 0.9;
+  border-radius: 0.5em;
+  transition: all 0.5s ease-in-out;
+  &:hover {
+    opacity: 1;
+  }
+  h2 {
+    text-transform: capitalize;
+    color: $white;
+    font-size: 4rem;
+    font-weight: 800;
+    padding: 0.5em;
+  }
+  * {
+    border: none;
+    padding: 1em;
+    border-radius: 0.5em;
+  }
+  &-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    gap: 0.6em;
+    > input {
+      padding: 1em 10em;
+      &:focus-visible {
+        outline: 0.1em solid $red !important;
+      }
+      @include mob {
+        padding: 0.5em;
+      }
+    }
+    > button {
+      color: $white;
+      background: $red;
+      text-transform: uppercase;
+      transition: all 0.5s ease-in-out;
+      user-select: none;
+      cursor: pointer;
+      &:hover {
+        background: $blue;
+      }
+    }
+    p {
+      text-transform: capitalize;
+      color: $blue;
+      span {
+        cursor: pointer;
+        color: $white;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

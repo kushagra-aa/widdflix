@@ -2,7 +2,8 @@
 import NoImage from "./../assets/imgs/no-img.png";
 // style
 import "../styles/css/card.css";
-const Card = ({ movie, isLargeRow }) => {
+import { Link } from "react-router-dom";
+const Card = ({ movie, isLargeRow, type }) => {
   const baseImgURL = "https://image.tmdb.org/t/p/original";
   return (
     <>
@@ -27,6 +28,9 @@ const Card = ({ movie, isLargeRow }) => {
           </h3>
           <p className="card-back-vote">{movie.vote_average}</p>
           <p className="card-back-tag">{movie.tagline}</p>
+          <Link to={`/details/${type === "tvs" ? "tv" : "movies"}/${movie.id}`}>
+            <button className="card-back-btn">view</button>
+          </Link>
         </div>
       </div>
     </>
