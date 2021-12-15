@@ -1,0 +1,199 @@
+@import "./vars/index";
+@import "resp";
+
+// about css
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5em;
+  padding: 5em 0;
+  gap: 3em;
+  overflow: hidden;
+  > img {
+    width: 15em;
+    height: 10em;
+  }
+  > p {
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 23px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.1em;
+    color: $white;
+    width: 70%;
+  }
+  &-btm {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    @include mob {
+      flex-direction: column;
+    }
+  }
+  &-code {
+    text-align: center;
+  }
+  &-links {
+    text-decoration: none;
+  }
+}
+// me css
+.me {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "made with with with"
+    "pic name name name"
+    "pic bio bio bio"
+    "pic btn1 btn2 btn3";
+  justify-items: center;
+  align-items: center;
+  background: $white;
+  box-shadow: inset 0px 0px 15px 5px rgba(0, 0, 0, 0.4);
+  padding: 5em;
+  @include mob {
+    grid-template-rows: repeat(7, 0.5fr);
+    grid-template-columns: repeat(2, 0.5fr);
+    grid-template-areas:
+      "made with"
+      "pic pic"
+      "name name"
+      "bio bio"
+      "btn1 btn1"
+      "btn2 btn2"
+      "btn3 btn3";
+    /* justify-content: center; */
+    grid-gap: 1.3em 0;
+    margin-bottom: 0;
+  }
+  * {
+    margin: 0;
+    user-select: none;
+  }
+  h5 {
+    font-size: 20px;
+    grid-area: with;
+    letter-spacing: 0.1em;
+    text-transform: capitalize;
+    color: $indigo;
+    @include mob {
+      font-size: 1rem;
+    }
+  }
+  h3 {
+    grid-area: made;
+    font-size: 30px;
+    letter-spacing: 0.1em;
+    text-transform: capitalize;
+    color: $indigo;
+    @include mob {
+      font-size: 1.5rem;
+    }
+  }
+  h4 {
+    grid-area: name;
+    font-size: 50px;
+    letter-spacing: 0.4em;
+    text-transform: capitalize;
+    color: $red;
+    font-family: $cav;
+    &::before {
+      content: " ";
+      position: relative;
+      border-bottom: 2px solid $red;
+      width: 30%;
+      height: 100%;
+      display: block;
+      top: 1em;
+      left: 9.4em;
+      @include mob {
+        width: 40%;
+        top: 2.3em;
+        left: 4em;
+      }
+    }
+    @include mob {
+      font-size: 2rem;
+      width: 100%;
+      text-align: center;
+    }
+  }
+  .me-pic {
+    grid-area: pic;
+  }
+  img {
+    border-radius: 100%;
+    width: 288px;
+    height: 288px;
+    border: 1px solid $indigo;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.3));
+    transition: all 0.5s ease-in-out;
+    @include mob {
+      height: 10rem;
+      width: 10rem;
+    }
+    &:hover {
+      transform: translateY(-1em);
+    }
+  }
+  p {
+    grid-area: bio;
+    width: 80%;
+    font-size: 30px;
+    line-height: 100%;
+    letter-spacing: 0.1em;
+    text-align: center;
+    text-transform: capitalize;
+    color: $indigo;
+    @include mob {
+      font-size: 1.4rem;
+      width: 70%;
+    }
+  }
+  &-btn {
+    font-family: $cav;
+    min-width: 10em;
+    mix-blend-mode: normal;
+    border-radius: 40px;
+    background: $indigo;
+    color: $red;
+    font-size: 1.7em;
+    text-align: center;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    border: none;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+    padding: 0.5em 1em;
+    @include mob {
+      font-size: 1.5rem;
+      min-width: 10em;
+      padding: 0.5rem;
+    }
+    &:hover {
+      transform: translateY(-1em);
+    }
+    &-1-con {
+      grid-area: btn1;
+    }
+    &-2 {
+      background: $red;
+      color: $indigo;
+      &:hover {
+        transform: translateY(1em);
+      }
+    }
+    &-2-con {
+      grid-area: btn2;
+    }
+    &-3-con {
+      grid-area: btn3;
+    }
+  }
+}

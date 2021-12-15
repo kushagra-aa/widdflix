@@ -1,0 +1,82 @@
+@import "./vars/index";
+@import "./resp";
+
+// animation speeds
+$animationSpeedSlow: 50s;
+$animationSpeedFast: 20s;
+$animationSpeedMid1: 30s;
+$animationSpeedMid2: 40s;
+
+// gradient
+@mixin gradient {
+  background: linear-gradient(
+    to right,
+    $indigo 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+// Animation
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-100%));
+  }
+}
+
+//
+.carousel {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  &-rows {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+    z-index: 4;
+    * {
+      z-index: 4;
+    }
+    &::before,
+    &::after {
+      @include gradient;
+      content: "";
+      height: 100%;
+      position: absolute;
+      width: 30%;
+      z-index: 2;
+    }
+
+    &::after {
+      right: 0;
+      top: 0;
+      transform: rotateZ(180deg);
+    }
+
+    &::before {
+      left: 0;
+      top: 0;
+    }
+
+    &-row {
+      animation: scroll $animationSpeedFast linear infinite;
+      display: flex;
+      &:nth-child(2),
+      &:nth-child(6) {
+        animation: scroll $animationSpeedMid1 linear infinite;
+      }
+      &:nth-child(3),
+      &:nth-child(5) {
+        animation: scroll $animationSpeedMid2 linear infinite;
+      }
+      &:nth-child(4) {
+        animation: scroll $animationSpeedSlow linear infinite;
+      }
+    }
+  }
+}

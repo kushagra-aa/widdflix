@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import TopBar from "./components/TopBar";
 import SideBar from "./components/SideBar";
 import Footer from "./components/Footer";
+import Carousel from "./components/Carousel";
 // loader
 import Spinner from "./components/Spinner";
 // Pages
@@ -15,18 +16,18 @@ import About from "./Pages/About";
 import Cards from "./components/Cards";
 import Search from "./Pages/Search";
 import Profile from "./Pages/Profile";
+import Detials from "./Pages/Detials";
+import PageNotFound from "./Pages/404-page";
+import Login from "./Pages/Login";
 // styles
 import "./App.css";
 import requests from "./Requests";
-import Login from "./Pages/Login";
 // auth from firebase
 import { auth } from "./firebase";
 // logout, login and selectUser reducers from user slice
 import { login, logout, selectUser } from "./features/userSlice";
 // use selector from redux
 import { useSelector } from "react-redux";
-import Detials from "./Pages/Detials";
-import PageNotFound from "./Pages/404-page";
 
 function App() {
   const user = useSelector(selectUser);
@@ -94,6 +95,7 @@ function App() {
                 element={<Detials type="movie" />}
               />
               <Route path="/details/tv/:id" element={<Detials type="tv" />} />
+              <Route path="/c" element={<Carousel />} />
               <Route
                 path="/search"
                 element={

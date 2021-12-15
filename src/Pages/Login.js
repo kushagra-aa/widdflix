@@ -8,6 +8,7 @@ import Banner from "./../assets/Banner.png";
 import { useEffect, useState } from "react";
 // siginscreen component
 import SignInScreen from "../components/SignInScreen";
+import Carousel from "../components/Carousel";
 
 const Login = () => {
   const [signIn, setSignIn] = useState(false);
@@ -29,10 +30,16 @@ const Login = () => {
     <>
       <div
         className="login"
-        style={{
-          backgroundImage: `url(${Banner})`,
-        }}
+        // style={{
+        //   backgroundImage: `url(${Banner})`,
+        // }}
       >
+        <div className="login-bg">
+          <div className="login-bg-con">
+            <Carousel />
+          </div>
+          <div className="login-bg-vignette"></div>
+        </div>
         <div className={`login-top ${show && "login-top-black"}`}>
           <img src={Logo} alt="login BG" className="login-top-logo" />
           <button className="login-top-btn" onClick={changeSignIn}>

@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caveat&display=swap");
+@-webkit-keyframes scroll {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(calc(-100%));
+            transform: translateX(calc(-100%));
+  }
+}
+@keyframes scroll {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(calc(-100%));
+            transform: translateX(calc(-100%));
+  }
+}
+
+.carousel {
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+}
+
+.carousel-rows {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  z-index: 4;
+}
+
+.carousel-rows * {
+  z-index: 4;
+}
+
+.carousel-rows::before, .carousel-rows::after {
+  background: -webkit-gradient(linear, left top, right top, from(#0e1222), to(rgba(255, 255, 255, 0)));
+  background: linear-gradient(to right, #0e1222 0%, rgba(255, 255, 255, 0) 100%);
+  content: "";
+  height: 100%;
+  position: absolute;
+  width: 30%;
+  z-index: 2;
+}
+
+.carousel-rows::after {
+  right: 0;
+  top: 0;
+  -webkit-transform: rotateZ(180deg);
+          transform: rotateZ(180deg);
+}
+
+.carousel-rows::before {
+  left: 0;
+  top: 0;
+}
+
+.carousel-rows-row {
+  -webkit-animation: scroll 20s linear infinite;
+          animation: scroll 20s linear infinite;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.carousel-rows-row:nth-child(2), .carousel-rows-row:nth-child(6) {
+  -webkit-animation: scroll 30s linear infinite;
+          animation: scroll 30s linear infinite;
+}
+
+.carousel-rows-row:nth-child(3), .carousel-rows-row:nth-child(5) {
+  -webkit-animation: scroll 40s linear infinite;
+          animation: scroll 40s linear infinite;
+}
+
+.carousel-rows-row:nth-child(4) {
+  -webkit-animation: scroll 50s linear infinite;
+          animation: scroll 50s linear infinite;
+}
+/*# sourceMappingURL=carousel.css.map */
