@@ -1,4 +1,4 @@
-# Books
+# Widdflix
 
 ![Books](/src/assets/LOGO.png)
 
@@ -13,18 +13,34 @@ Hosted On firebase
 
 Built with 🤍 For You!
 
-<a target="_blank" href="widd-flix.web.app/">![image](https://user-images.githubusercontent.com/68841296/144819930-05f66371-f359-41d2-b5c8-1dd3a6b6803e.png)
+<a target="_blank" href="https://widd-flix.web.app/">
+  <img src="https://user-images.githubusercontent.com/68841296/146169520-a70cab10-2ac3-46e6-90e2-739fa59f8cc4.png"/ width="100px" height="50px">
 </a>
-<a target="_blank" href="https://www.behance.net/kushagra-aa">![image](https://user-images.githubusercontent.com/68841296/144819944-7fa5bb23-7e9f-4555-b493-d0f2fe1336c2.png)
+<a target="_blank" href="https://www.behance.net/kushagra-aa">
+  <img src="https://user-images.githubusercontent.com/68841296/146169548-192d198a-72f4-48d2-8d66-cb5b3d3de84c.png"/ width="100px" height="50px">
 </a>
 
 ## Screenshots
+### Home Page Before Login
+![image](https://user-images.githubusercontent.com/68841296/146168491-161f4730-76db-4946-9608-7ccd4b2a96e8.png)
+### Home Page
+![image](https://user-images.githubusercontent.com/68841296/146168785-d5fe48fd-b4c0-4f0d-a6a1-bd6d144594d0.png)
 
-![image](https://user-images.githubusercontent.com/68841296/144818418-967bb07a-5e4e-47a6-abaa-8421a11c895c.png)
-![image](https://user-images.githubusercontent.com/68841296/144818505-2207be39-802a-496e-9b5c-67b86111c1fb.png)
-![image](https://user-images.githubusercontent.com/68841296/144818743-7a74b6ad-66d3-44b2-a74c-0368cf95c79c.png)
-![image](https://user-images.githubusercontent.com/68841296/144818851-d76ca3c7-60b4-4603-8f9d-bc8335ac7e2c.png)
-![image](https://user-images.githubusercontent.com/68841296/144818883-30adb69f-a67b-49b8-bcfc-1b25062c0a19.png)
+### Movies/Series Page
+![image](https://user-images.githubusercontent.com/68841296/146168803-0089bc6b-bed1-4bdf-8d7c-95628d31c20b.png)
+
+### About-Me Section
+![image](https://user-images.githubusercontent.com/68841296/146168814-d11e272f-af1a-43cb-90cf-fc2b406b9026.png)
+
+### Search Bar
+![image](https://user-images.githubusercontent.com/68841296/146168854-81fb0113-a44f-4cb0-9255-e67b94aa3d9c.png)
+
+### Search Results
+![image](https://user-images.githubusercontent.com/68841296/146169038-1d745ff3-f48d-41f9-b69b-b89f35013736.png)
+
+### Profile Page
+![image](https://user-images.githubusercontent.com/68841296/146168893-dad60c7f-1edb-46a3-a74c-2565856ec485.png)
+
 
 ## Made using
 
@@ -95,6 +111,3 @@ Runs the app in the development mode.
 ```
 
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
