@@ -9,56 +9,69 @@ import Avatar from "./../assets/imgs/no-av.png";
 
 // style
 import "./../styles/css/profile.css";
-import { useState } from "react";
-
-// plans
-let plans = [
-  {
-    id: 0,
-    name: "basic",
-    des: "480p",
-    rate: "20",
-    isCurrent: false,
-  },
-  {
-    id: 1,
-    name: "standard",
-    des: "720p",
-    rate: "50",
-    isCurrent: false,
-  },
-  {
-    id: 2,
-    name: "premium",
-    des: "1080p",
-    rate: "80",
-    isCurrent: false,
-  },
-  {
-    id: 3,
-    name: "diamond",
-    des: "4k",
-    rate: "100",
-    isCurrent: true,
-  },
-];
+import { useEffect, useState } from "react";
 
 const Profile = () => {
+  // plans
+  const [plans, setPlans] = useState([
+    {
+      id: 0,
+      name: "basic",
+      des: "480p",
+      rate: "20",
+      isCurrent: false,
+    },
+    {
+      id: 1,
+      name: "standard",
+      des: "720p",
+      rate: "50",
+      isCurrent: false,
+    },
+    {
+      id: 2,
+      name: "premium",
+      des: "1080p",
+      rate: "80",
+      isCurrent: false,
+    },
+    {
+      id: 3,
+      name: "diamond",
+      des: "4k",
+      rate: "100",
+      isCurrent: true,
+    },
+  ]);
   const user = useSelector(selectUser);
-  const [current] = useState(
+  // current plan
+  const [current, setCurrent] = useState(
     plans.find((plan) => {
       if (plan.isCurrent === true) return plan;
     })
   );
 
-  const currentBtn = (
-    <button className="profile-con-plans-con-plans-plan-sub current-btn">
-      current plan
-    </button>
-  );
-  const SubBtn = (
-    <button className="profile-con-plans-con-plans-plan-sub">subscribe</button>
-  );
+  const changeCurrent = (id) => {
+    let newPlans = [];
+    plans.forEach((plan, i) => {
+      if (plan.isCurrent === true) {
+        plan["isCurrent"] = false;
+      }
+      if (plan.id === id) {
+        plan["isCurrent"] = true;
+      }
+      newPlans.push(plan);
+    });
+    setPlans(newPlans);
+  };
+
+  useEffect(() => {
+    setCurrent(
+      plans.find((plan) => {
+        if (plan.isCurrent === true) return plan;
+      })
+    );
+  }, [plans]);
 
   return (
     <>
@@ -91,7 +104,14 @@ const Profile = () => {
                     <p className="profile-con-plans-con-plans-plan-rate">
                       $ {plan.rate} /m
                     </p>
-                    {plan.isCurrent ? currentBtn : SubBtn}
+                    <button
+                      onClick={() => changeCurrent(plan.id)}
+                      className={`profile-con-plans-con-plans-plan-sub ${
+                        plan.isCurrent ? "current-btn" : ""
+                      }`}
+                    >
+                      {plan.isCurrent ? "current plan" : "subscibe"}
+                    </button>
                   </div>
                 );
               })}
